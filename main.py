@@ -12,10 +12,12 @@ app = Flask(__name__)
 def assist():
     data = request.json
     a = RAG()
+    query = "wadawdwad"
+    res = get_hyeat(query, a.model, a.tokenizer)
 
     response = {
         "text": "Успешный ответ",
-        "links": a.generate("awdawdawdwad") #[link1, link2]
+        "links": res #[link1, link2]
     }
     return jsonify(response), 200
 
