@@ -5,7 +5,6 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, GenerationConfig
 
 class RAG:
     def __init__(self):
-        return
         MODEL_NAME = "IlyaGusev/saiga_llama3_8b"
         self.model = AutoModelForCausalLM.from_pretrained(
             MODEL_NAME,
@@ -20,7 +19,6 @@ class RAG:
 
 
     def generate(self, query):
-        return "wadawdwa"
         prompt = self.tokenizer.apply_chat_template([{
             "role": "system",
             "content": DEFAULT_SYSTEM_PROMPT

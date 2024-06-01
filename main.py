@@ -13,8 +13,6 @@ def assist():
     data = request.json
     a = RAG()
 
-    print(data)
-
     response = {
         "text": "Успешный ответ",
         "links": a.generate("awdawdawdwad") #[link1, link2]
